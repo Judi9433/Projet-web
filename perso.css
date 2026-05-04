@@ -1,0 +1,40 @@
+.text-center{
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: x-large !important;
+}
+
+.conteneur{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border: 1px solid black;
+
+}
+
+.photo12{
+    width: 56px;
+    height: 60 px;
+}
+
+.photo1{
+    width: 130px;
+    height: 130px;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
+.photo2{
+    width: 130px;
+    height: 130px;
+    padding-right: 10px;
+    padding-top: 3px;
+}
+.titre0{
+    padding-top: 70px;
+}
+
+.contenu{
+    padding-top: 25px;
+    border: 1px solid black ;
+}
