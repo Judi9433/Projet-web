@@ -14,15 +14,8 @@
 </head>
 
 <body>
-
     <?php
-    try {
-        $conn = new PDO("mysql:host=localhost;dbname=magasin", "root", "", [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-        ]);
-    } catch (\Exception $e) {
-        die("ERREUR:" . $e->getMessage());
-    }
+    include("config.php");
     $req = $conn->query("SELECT * FROM article");
     $resultats = $req->fetchAll(PDO::FETCH_ASSOC);
 
@@ -37,40 +30,44 @@
     font-size: x-large ; ' >Il y a " . $nombre . " articles en magasin</h4>";
         ?>
 
-        <table class="table table-bordered pt-4">
-            <thead class="table-success">
-                <tr>
-                    <th scope="col" class="bg-secondary">
-                        <div class="d-grid  justify-content-md-start "><button class="btn btn-secondary border-warning" type="button"><a class="text-white nav-link " href="accueil.php">Retour</a></button></div>
-                    </th>
-
-                    <th scope="col" class="bg-secondary">
-                        <div class="d-grid  justify-content-md-end"><button class="btn btn-secondary border-warning" type="button"><a class="text-white nav-link " href="formarticle.php">Ajouter un article</a></button></div>
-                    </th>
-                </tr>
-            </thead>
-        </table>
-        <table class="table table-bordered border-success">
-            <thead class="table-primary">
-                <tr>
-                    <th scope="col">code article</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Prix</th>
-                    <th scope="col">catégorie</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($resultats as $art) : ?>
+        <div class="table-responsive">
+            <table class="table  pt-4">
+                <thead class="table-primary">
                     <tr>
-                        <td><?= htmlspecialchars($art["code"]) ?></td>
-                        <td><?= htmlspecialchars($art["desq"]) ?></td>
-                        <td><?= htmlspecialchars($art["prix"]) ?></td>
-                        <td><?= htmlspecialchars($art["categorie"]) ?></td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
+                        <th scope="col" class="bg-white">
+                            <div class="d-grid  justify-content-md-start "><button class="btn btn-primary border-warning" type="button"><a class="text-white nav-link " href="accueil.php">Retour</a></button></div>
+                        </th>
 
-        </table>
+                        <th scope="col" class="bg-white">
+                            <div class="d-grid  justify-content-md-end"><button class="btn btn-primary border-warning" type="button"><a class="text-white nav-link " href="formarticle.php">Ajouter un article</a></button></div>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered border-success">
+                <thead class="table-warning">
+                    <tr>
+                        <th scope="col">code article</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Prix</th>
+                        <th scope="col">catégorie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($resultats as $art) : ?>
+                        <tr>
+                            <td><?= htmlspecialchars($art["code"]) ?></td>
+                            <td><?= htmlspecialchars($art["desq"]) ?></td>
+                            <td><?= htmlspecialchars($art["prix"]) ?></td>
+                            <td><?= htmlspecialchars($art["categorie"]) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+
+            </table>
+        </div>
 
     </div><br>
 

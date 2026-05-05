@@ -25,8 +25,9 @@
     ?>
     <div class="container">
         <h3 class="text-center pt-5">Tableau montrant tous vos clients:</h3>
-        <table class="table table-bordered border-success">
-            <thead class="table-primary">
+        <div class="table-responsive">
+         <table class="table table-bordered border-success">
+            <thead class="table-warning">
                 <tr>
                     <th scope="col">Id du client</th>
                     <th scope="col">Nom du client</th>
@@ -55,6 +56,7 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        </div>
 
     </div><br>
 
