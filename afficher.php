@@ -24,7 +24,7 @@
 
     ?>
     <div class="container">
-        <h3 class="text-center pt-5">Tous nos articles par catégorie:</h3>
+        <h3 class="text-center pt-5 fw-bold">Tous nos articles par catégorie:</h3>
         <?php
         echo "<h4 style=' text-align: center;  font-family: Arial, Helvetica, sans-serif ;
     font-size: x-large ; ' >Il y a " . $nombre . " articles en magasin</h4>";

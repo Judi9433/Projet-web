@@ -45,7 +45,7 @@
 
     <div class="container pt-5">
 
-        <h4 class="text-center ">
+        <h4 class="text-center fw-bold ">
             Vous avez effectué <?= $nombre ?> ventes au totale
         </h4>
 

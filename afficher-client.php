@@ -24,7 +24,7 @@
 
     ?>
     <div class="container">
-        <h3 class="text-center pt-5">Tableau montrant tous vos clients:</h3>
+        <h3 class="text-center pt-5 fw-bold">Tableau montrant tous vos clients:</h3>
         <div class="table-responsive">
          <table class="table table-bordered border-success">
             <thead class="table-warning">
