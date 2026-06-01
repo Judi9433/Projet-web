@@ -1,11 +1,5 @@
 <?php
-try {
-    $conn = new PDO("mysql:host=localhost;dbname=magasin", "root", "", [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-    ]);
-} catch (\Exception $e) {
-    die("ERREUR:" . $e->getMessage());
-}
+include("config.php");
 
 if(isset($_POST["nom"]) && isset($_POST["prenom"]) && isset($_POST["contact"]) && isset($_POST["mail"]) && isset($_POST["mdp1"]) && isset($_POST["mdp2"]) ){
     $nom = $_POST["nom"];
